@@ -18,4 +18,7 @@ class TestBasics(unittest.TestCase):
 	def test_badstring(self):
 		with self.assertRaises(TypeError):
 			rpn.calculate("1 2 3 +")
+	def test_exponent(self):
+		result = rpn.calculate("5 2 ^")
+		self.assertEqual(25, result)
 
